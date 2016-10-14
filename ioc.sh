@@ -61,6 +61,7 @@ function writeRepositoryBoilerPlate {
 echo "<?php
 
 namespace App\Repositories\\${repoName};
+use App\Repositories\\${repoName}\\${repoName}Contract;
 
 class ${eloquent}${repoName}Repository implements ${repoName}Contract
 {

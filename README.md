@@ -2,7 +2,8 @@
 Laravel made available the IoC container for developers. This bash script is aimed at speeding up development for Laravel developers.
 
 ## How to use
-Add the file to the root of your Laravel project directory and  run it like so: **./ioc.sh**
+Add the file to the root of your Laravel project directory and  run it like so: **./ioc.sh**. 
+
 In cases where you're going to use it on an online development environment, you need to assign permission to make the script executable like so: **chmod +x ioc.sh**
 
 ## What it does

@@ -3,6 +3,7 @@ Laravel made available the IoC container for developers. This bash script is aim
 
 ## How to use
 Add the file to the root of your Laravel project directory and  run it like so: **./ioc.sh**
+In cases where you're going to use it on an online development environment, you need to assign permission to make the script executable like so: **chmod +x ioc.sh**
 
 ## What it does
 After running the bash script, you will be prompted for a module name. After that input, the following is performed as a result of that:

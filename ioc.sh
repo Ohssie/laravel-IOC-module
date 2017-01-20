@@ -133,8 +133,8 @@ function controllerCrudFunctions {
 
 			protected \$repo;
 
-			public function __construct(${repoName^}Contract ${repoName,}Contract) {
-				\$this->\$repo = ${repoName,}Contract;
+			public function __construct(${repoName^}Contract \$${repoName,}Contract) {
+				\$this->repo = \$${repoName,}Contract;
 			}
 
 	    /**

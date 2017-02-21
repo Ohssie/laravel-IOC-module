@@ -65,8 +65,8 @@ writeContractBoilerPlate
 
 function writeRepositoryBoilerPlate {
 echo "<?php
-
 namespace App\Repositories\\${repoName^};
+
 use App\Repositories\\${repoName^}\\${repoName^}Contract;
 
 class ${eloquent}${repoName^}Repository implements ${repoName^}Contract
@@ -79,7 +79,6 @@ writeRepositoryBoilerPlate
 
 function bindContractToRepository {
 echo "<?php
-
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -121,97 +120,97 @@ function createViews {
 createViews
 
 function controllerCrudFunctions {
-	echo "<?php
+echo "<?php
 
-	namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
-	use Illuminate\Http\Request;
-	use App\Repositories\\${repoName^}\\${repoName^}Contract;
+use Illuminate\Http\Request;
+use App\Repositories\\${repoName^}\\${repoName^}Contract;
 
-	class ${repoName^}Controller extends Controller
-	{
+class ${repoName^}Controller extends Controller
+{
 
-			protected \$repo;
+	protected \$repo;
 
-			public function __construct(${repoName^}Contract \$${repoName,}Contract) {
-				\$this->repo = \$${repoName,}Contract;
-			}
+	public function __construct(${repoName^}Contract \$${repoName,}Contract) {
+		\$this->repo = \$${repoName,}Contract;
+	}
 
-	    /**
-	     * Display a listing of the resource.
-	     *
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function index()
-	    {
-	        //
-	    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+	//
+    }
 
-	    /**
-	     * Show the form for creating a new resource.
-	     *
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function create()
-	    {
-	        //
-	    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+	//
+    }
 
-	    /**
-	     * Store a newly created resource in storage.
-	     *
-	     * @param  \Illuminate\Http\Request  \$request
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function store(Request \$request)
-	    {
-	        //
-	    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  \$request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request \$request)
+    {
+	//
+    }
 
-	    /**
-	     * Display the specified resource.
-	     *
-	     * @param  int  \$id
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function show(\$id)
-	    {
-	        //
-	    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(\$id)
+    {
+	//
+    }
 
-	    /**
-	     * Show the form for editing the specified resource.
-	     *
-	     * @param  int  \$id
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function edit(\$id)
-	    {
-	        //
-	    }
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(\$id)
+    {
+	//
+    }
 
-	    /**
-	     * Update the specified resource in storage.
-	     *
-	     * @param  \Illuminate\Http\Request  \$request
-	     * @param  int  \$id
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function update(Request \$request, \$id)
-	    {
-	        //
-	    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  \$request
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request \$request, \$id)
+    {
+	//
+    }
 
-	    /**
-	     * Remove the specified resource from storage.
-	     *
-	     * @param  int  \$id
-	     * @return \Illuminate\Http\Response
-	     */
-	    public function delete(\$id)
-	    {
-	        //
-	    }
-	}" > ./app/Http/Controllers/${repoName^}Controller.php
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  \$id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete(\$id)
+    {
+	//
+    }
+}" > ./app/Http/Controllers/${repoName^}Controller.php
 }
 controllerCrudFunctions

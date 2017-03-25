@@ -57,9 +57,7 @@ echo "<?php
 namespace App\Repositories\\${repoName^};
 
 interface ${repoName^}Contract {
-    
     //
-    
 }" > ./app/Repositories/${repoName^}/${repoName^}${contract}
 }
 writeContractBoilerPlate
@@ -73,7 +71,6 @@ use App\Repositories\\${repoName^}\\${repoName^}Contract;
 
 class ${eloquent}${repoName^}Repository implements ${repoName^}Contract {
     //
-    
 }" > ./app/Repositories/${repoName^}/${eloquent}${repoName^}${repository}
 }
 writeRepositoryBoilerPlate
@@ -134,7 +131,7 @@ use App\Repositories\\${repoName^}\\${repoName^}Contract;
 class ${repoName^}Controller extends Controller
 {
     protected \$repo;
-    
+
     public function __construct(${repoName^}Contract \$${repoName,}Contract) {
         \$this->repo = \$${repoName,}Contract;
     }

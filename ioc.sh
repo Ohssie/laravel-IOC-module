@@ -45,7 +45,7 @@ function registerServiceProvider {
     then
         echo "*$(tput setaf 6)Service Provider is already registered!$(tput sgr0)"
     else
-        sed -i -e '/App\\Providers\\RouteServiceProvider::class,/a \ \t\t\t\t'${string} ${FILE} 2> /dev/null
+        sed -i -e '/App\\Providers\\RouteServiceProvider::class,/a \ \t\t'${string} ${FILE} 2> /dev/null
         echo "*$(tput setaf 6)Service Provider registered successfully inside app.php of the config directory.$(tput sgr0)"
     fi
 }

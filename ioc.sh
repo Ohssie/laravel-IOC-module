@@ -56,29 +56,31 @@ echo "<?php
 
 namespace App\Repositories\\${repoName^};
 
-interface ${repoName^}Contract
-{
+interface ${repoName^}Contract {
+	
 	//
+	
 }" > ./app/Repositories/${repoName^}/${repoName^}${contract}
 }
 writeContractBoilerPlate
 
 function writeRepositoryBoilerPlate {
 echo "<?php
+
 namespace App\Repositories\\${repoName^};
 
 use App\Repositories\\${repoName^}\\${repoName^}Contract;
 
-class ${eloquent}${repoName^}Repository implements ${repoName^}Contract
-{
-
+class ${eloquent}${repoName^}Repository implements ${repoName^}Contract {
 	//
+	
 }" > ./app/Repositories/${repoName^}/${eloquent}${repoName^}${repository}
 }
 writeRepositoryBoilerPlate
 
 function bindContractToRepository {
 echo "<?php
+
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
@@ -90,16 +92,18 @@ class ${repoName^}${provider} extends ServiceProvider
      *
      * @return void
      */
+     
     public function boot()
     {
         //
     }
-
+    
     /**
      * Register the application services.
      *
      * @return void
      */
+     
     public function register()
     {
         \$this->app->bind('App\Repositories\\${repoName^}\\${repoName^}Contract',
@@ -129,87 +133,45 @@ use App\Repositories\\${repoName^}\\${repoName^}Contract;
 
 class ${repoName^}Controller extends Controller
 {
-
 	protected \$repo;
-
+	
 	public function __construct(${repoName^}Contract \$${repoName,}Contract) {
 		\$this->repo = \$${repoName,}Contract;
 	}
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-	//
+	    //
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-	//
+	    //
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  \$request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request \$request)
     {
-	//
+	    //
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  \$id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(\$id)
     {
-	//
+	    //
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  \$id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(\$id)
     {
-	//
+	    //
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  \$request
-     * @param  int  \$id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request \$request, \$id)
     {
-	//
+	    //
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  \$id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function delete(\$id)
     {
-	//
+	    //
     }
 }" > ./app/Http/Controllers/${repoName^}Controller.php
 }
